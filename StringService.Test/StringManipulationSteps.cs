@@ -11,7 +11,7 @@ namespace StringService.Test
         [When(@"I consume UpperCase service with '(.*)' string")]
         public void WhenIConsumeUpperCaseServiceWithString(string p0)
         {
-            var result = StringManipulation.UpperCase("tEsT");
+            var result = StringManipulation.UpperCase(p0);
             Bag.Result = result;
         }
         
@@ -20,7 +20,7 @@ namespace StringService.Test
         {
             var result = Bag.Result.ToString();
 
-            Assert.AreEqual("TEST", result);
+            Assert.AreEqual(p0, result);
         }
     }
 }

@@ -65,11 +65,11 @@ namespace StringService.Test
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("UpperCase")]
+        [NUnit.Framework.DescriptionAttribute("Validate Upper Case Service")]
         [NUnit.Framework.CategoryAttribute("UpperCase")]
-        public virtual void UpperCase()
+        public virtual void ValidateUpperCaseService()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UpperCase", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Upper Case Service", new string[] {
                         "UpperCase"});
 #line 4
 this.ScenarioSetup(scenarioInfo);
@@ -77,6 +77,18 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("I consume UpperCase service with \'tEsT\' string", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 6
  testRunner.Then("the result should be \'TEST\' on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 8
+ testRunner.When("I consume UpperCase service with \'123\' string", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
+ testRunner.Then("the result should be \'123\' on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+ testRunner.When("I consume UpperCase service with \'\' string", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+ testRunner.Then("the result should be \'\' on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 14
+ testRunner.When("I consume UpperCase service with \'aA1!9(\' string", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+ testRunner.Then("the result should be \'AA1!9(\' on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
